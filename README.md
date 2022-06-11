@@ -22,3 +22,5 @@
 ## [03. 공통 인터페이스 설정](./doc/section03.md)
 
 ## [04. 쿼리 메소드 기능](./doc/section04.md)
+
+## [05. 확장 기능](./doc/section05.md)
