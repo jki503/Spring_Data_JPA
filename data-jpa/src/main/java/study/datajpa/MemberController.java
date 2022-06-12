@@ -30,10 +30,10 @@ public class MemberController {
         return memberRepository.findAll(pageable);
     }
 
-    @PostConstruct
-    public void init(){
-        for (int i = 0; i < 100; i++) {
-            memberRepository.save(new Member("user" + i , 10 + i,null));
-        }
-    }
+//    @PostConstruct
+//    public void init(){
+//        for (int i = 0; i < 100; i++) {
+//            memberRepository.save(new Member("user" + i , 10 + i,null));
+//        }
+//    }
 }

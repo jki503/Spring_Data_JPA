@@ -24,3 +24,7 @@
 ## [04. 쿼리 메소드 기능](./doc/section04.md)
 
 ## [05. 확장 기능](./doc/section05.md)
+
+## [06. 스프링 데이터 JPA 구현체 분석](./doc/section06.md)
+
+## [07. 나머지 기능들](./doc/section07.md)

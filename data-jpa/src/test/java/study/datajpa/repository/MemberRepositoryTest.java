@@ -166,8 +166,6 @@ class MemberRepositoryTest {
 
         Page<Member> page = memberRepository.findByAge(age, pageRequest);
 
-        page.map(MemberDto::of);
-
         //page에 있는 실제 content
         List<Member> content = page.getContent();
 
@@ -276,5 +274,23 @@ class MemberRepositoryTest {
 
         memberRepository.save(member1);
         member1.setUsername("updateMember");
+    }
+
+    @Test
+    public void projections(){
+        Team teamA = new Team("teamA");
+
+        teamRepository.save(teamA);
+
+        memberRepository.save(new Member("member1", 10, teamA));
+        memberRepository.save(new Member("member2", 20, teamA));
+
+        em.flush();
+        em.clear();
+
+        //when
+        List<UsernameOnlyDto> result = memberRepository.findProjectionsByUsername("member1");
+
+        result.forEach(System.out::println);
     }
 }
